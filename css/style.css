@@ -1,0 +1,116 @@
+body {
+  font-family: 'Poiret One', cursive;
+  margin: 0; }
+
+header {
+  padding: 3em 0;
+  background-color: black;
+  background-image: url(../images/artDeco3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  header h1 {
+    color: #D4AF37;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 5em;
+    margin: 0;
+    text-shadow: 0px 0px 3px white; }
+  header h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    color: white; }
+
+.summary {
+  text-align: center;
+  font-size: 1.3em;
+  padding: 1em 2em;
+  background-color: #D4AF37;
+  position: relative; }
+  .summary p {
+    max-width: 900px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%); }
+    .summary p a {
+      text-decoration: none;
+      color: #808080; }
+
+.main supporting .explanation h3 {
+  text-align: center;
+  text-decoration: underline; }
+
+.main {
+  width: 70%;
+  display: inline-block;
+  float: left; }
+
+.sidebar {
+  width: 30%;
+  display: inline-block;
+  float: left;
+  background-color: darkgray; }
+  .sidebar .wrapper {
+    border: 1px dotted black; }
+    .sidebar .wrapper .wrapper:hover #slide {
+      transition: 1s;
+      left: 0; }
+    .sidebar .wrapper .design-selection {
+      margin-right: 2em; }
+      .sidebar .wrapper .design-selection h3 {
+        margin-left: 1em;
+        text-decoration: underline; }
+      .sidebar .wrapper .design-selection ul {
+        list-style-type: none; }
+        .sidebar .wrapper .design-selection ul li {
+          border-bottom: 1px dotted black;
+          padding: 1em; }
+          .sidebar .wrapper .design-selection ul li a {
+            text-decoration: none;
+            color: black; }
+    .sidebar .wrapper .design-archives, .sidebar .wrapper .zen-resources {
+      margin-right: 2em; }
+      .sidebar .wrapper .design-archives h3, .sidebar .wrapper .zen-resources h3 {
+        margin-left: 1em;
+        text-decoration: underline; }
+      .sidebar .wrapper .design-archives ul, .sidebar .wrapper .zen-resources ul {
+        list-style-type: none; }
+        .sidebar .wrapper .design-archives ul li, .sidebar .wrapper .zen-resources ul li {
+          border-bottom: 1px dotted black;
+          padding: .5em; }
+          .sidebar .wrapper .design-archives ul li a, .sidebar .wrapper .zen-resources ul li a {
+            text-decoration: none;
+            color: black; }
+
+.requirements {
+  margin-right: 1em;
+  text-align: left;
+  font-size: 1.3em;
+  padding: 1em 2em;
+  background-color: #D4AF37;
+  position: relative; }
+  .requirements h3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bolder; }
+  .requirements p {
+    max-width: 900px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%); }
+    .requirements p a {
+      text-decoration: none;
+      color: #808080; }
+  .requirements footer {
+    background-color: black;
+    width: 100%;
+    display: block;
+    height: auto;
+    padding: 1em;
+    text-align: center; }
+    .requirements footer a {
+      color: #D4AF37;
+      text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */
