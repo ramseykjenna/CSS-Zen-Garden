@@ -1,0 +1,9 @@
+- max width and margin on first pargraph section
+- padding on paragraphs next to sidebar
+- sidebar mobile (move down)
+- consistent font size (yellow section and outside of yellow section)
+- yellow section 100% width at mobile size
+- style links (css animation hover)
+- before and after decorative element on h1's
+- lighten up sidebar
+- general liney styling

@@ -1,8 +1,8 @@
         // - - - - - - - - - - Variables - - - - - - - - - //
         $white: #FFFFFF;
-        $gold: #D4AF37;
+        $gold: #C5B270;
         $black: #603cba;
-        $highlight: #808080;
+        $highlight: #D2D7D3;
         // - - - - - - - - - - Mixins - - - - - - - - - //
         @mixin h-center($position: relative) {
             position: $position;
@@ -10,151 +10,258 @@
             transform: translateX(-50%);
         }
         
+        @mixin centerer($position: relative) {
+            position: $position;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        @mixin inline($float:left) {
+            position: relative;
+            display: inline-block;
+            float: $float;
+        }
+        
         // - - - - - - - - - - Global Styles - - - - - - - - - //
         body {
             font-family: 'Poiret One', cursive;
             margin: 0;
-        }
-        
-        header {
-            padding: 3em 0;
-            background-color: black;
-            background-image: url(../images/artDeco3.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            h1 {
-                color: $gold;
-                text-align: center;
-                text-transform: uppercase;
-                font-size: 5em;
-                margin: 0;
-                text-shadow: 0px 0px 3px white;
-            }
-            h2 {
-                text-align: center;
-                text-transform: uppercase;
-                margin: 0;
-                color: white;
-            }
-        }
-        
-        .summary {
-            text-align: center;
-            font-size: 1.3em;
-            padding: 1em 2em;
             background-color: $gold;
-            position: relative;
-            p {
-                max-width: 900px;
-                @include h-center;
-                a {
-                    text-decoration: none;
-                    color: $highlight;
-                }
-            }
-        }
-        
-        .preamble {}
-        
-        .main supporting {
-            .explanation {
-                h3 {
-                    text-align: center;
-                    text-decoration: underline;
-                }
-            }
-        }
-        
-        .main {
-            width: 70%;
-            display: inline-block;
-            float: left;
-        }
-        
-        .sidebar {
-            width: 30%;
-            display: inline-block;
-            float: left;
-            background-color: darkgray;
-            .wrapper {
-                border: 1px dotted black;
-                .wrapper:hover #slide {
-                    transition: 1s;
-                    left: 0;
-                }
-                .design-selection {
-                    margin-right: 2em;
-                    h3 {
-                        margin-left: 1em;
-                        text-decoration: underline;
+            .page-wrapper {
+                position: relative;
+                .intro {}
+                header {
+                    padding: 3em 0;
+                    background-color: black;
+                    background-image: url(../images/artDeco3.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    margin-bottom: 4em;
+                    h1 {
+                        color: $gold;
+                        text-align: center;
+                        text-transform: uppercase;
+                        font-size: 5em;
+                        margin: 0;
+                        text-shadow: 0px 0px 3px white;
                     }
-                    ul {
-                        list-style-type: none;
-                        li {
-                            border-bottom: 1px dotted black;
-                            padding: 1em;
-                            a {
-                                text-decoration: none;
-                                color: black;
-                            }
+                    h2 {
+                        text-align: center;
+                        text-transform: uppercase;
+                        margin: 0;
+                        color: white;
+                    }
+                }
+                .summary {
+                    width: 80%;
+                    @include centerer;
+                    margin-bottom: 6em;
+                    p {
+                        text-align: center;
+                        font-weight: bold;
+                        font-size: 1.5em;
+                        margin: 0;
+                        a {
+                            text-decoration: none;
+                            color: $highlight;
+                        }
+                        a {
+                            color: #highlight;
+                            transition: all 0.2s linear;
+                        }
+                        a:hover,
+                        a:focus {
+                            color: black;
                         }
                     }
                 }
-                .design-archives {
-                    margin-right: 2em;
+                .preamble {
+                    background-color: white;
+                    width: 80%;
+                    @include centerer;
+                    border: 2px dotted black;
                     h3 {
-                        margin-left: 1em;
-                        text-decoration: underline;
+                        text-align: center;
+                        font-size: 1.5em;
+                        font-weight: bold;
                     }
-                    ul {
-                        list-style-type: none;
-                        li {
-                            border-bottom: 1px dotted black;
-                            padding: .5em;
+                    h3:before {
+                        font-family: FontAwesome;
+                        content: "\f219";
+                    }
+                    h3:after {
+                        font-family: FontAwesome;
+                        content: "\f219";
+                    }
+                    p {
+                        margin: 0 1em 1em 1em;
+                    }
+                }
+                #zen-supporting {
+                    position: relative;
+                    .explanation {
+                        width: 45%;
+                        @include inline;
+                        margin-left: 5em;
+                        h3 {
+                            text-align: center;
+                            font-size: 1.5em;
+                            font-weight: bold;
+                        }
+                        h3:before {
+                            font-family: FontAwesome;
+                            content: "\f219";
+                        }
+                        h3:after {
+                            font-family: FontAwesome;
+                            content: "\f219";
+                        }
+                    }
+                    .participation {
+                        width: 45%;
+                        @include inline;
+                        margin-bottom: 3em;
+                        h3 {
+                            text-align: center;
+                            font-size: 1.5em;
+                            font-weight: bold;
+                        }
+                        h3:before {
+                            font-family: FontAwesome;
+                            content: "\f219";
+                        }
+                        h3:after {
+                            font-family: FontAwesome;
+                            content: "\f219";
+                        }
+                        p {
                             a {
                                 text-decoration: none;
-                                color: black;
+                                color: $highlight;
+                            }
+                            a:hover {
+                                font-style: italic;
                             }
                         }
                     }
+                    .benefits {
+                        width: 80%;
+                        margin-left: 5em;
+                        h3 {
+                            font-size: 1.5em;
+                            font-weight: bold;
+                        }
+                        h3:before {
+                            font-family: FontAwesome;
+                            content: "\f219";
+                        }
+                        h3:after {
+                            font-family: FontAwesome;
+                            content: "\f219";
+                        }
+                    }
+                    .requirements {
+                        width: 80%;
+                        margin-left: 5em;
+                        h3 {
+                            font-size: 1.5em;
+                            font-weight: bold;
+                        }
+                        h3:before {
+                            font-family: FontAwesome;
+                            content: "\f219";
+                        }
+                        h3:after {
+                            font-family: FontAwesome;
+                            content: "\f219";
+                        }
+                        p {
+                            a {
+                                text-decoration: none;
+                                color: $highlight;
+                            }
+                            a:hover {
+                                font-style: italic;
+                            }
+                        }
+                    }
+                    footer {
+                        width: 50%;
+                        @include h-center;
+                        font-size: 2em;
+                        border-bottom: 2px dotted black;
+                        margin-top: 2em;
+                        margin-bottom: 5em;
+                        a {
+                            text-decoration: none;
+                            color: $highlight;
+                            margin-left: 2em;
+                        }
+                        a:hover {
+                            font-style: italic;
+                        }
+                    }
                 }
-                .zen-resources {
-                    @extend .design-archives
-                }
-            }
-        }
-        
-        .requirements {
-            margin-right: 1em;
-            text-align: left;
-            font-size: 1.3em;
-            padding: 1em 2em;
-            background-color: $gold;
-            position: relative;
-            h3 {
-                text-transform: uppercase;
-                text-align: center;
-                font-weight: bolder;
-            }
-            p {
-                max-width: 900px;
-                @include h-center;
-                a {
-                    text-decoration: none;
-                    color: $highlight;
-                }
-            }
-            footer {
-                background-color: black;
-                width: 100%;
-                display: block;
-                height: auto;
-                padding: 1em;
-                text-align: center;
-                a {
-                    color: $gold;
-                    text-decoration: none;
+                .sidebar {
+                    width: 80%;
+                    @include centerer;
+                    margin-top: 2em;
+                    border: 2px dotted black;
+                    background-color: white;
+                    height: 17em;
+                    .wrapper {
+                        position: relative;
+                        .design-selection {
+                            @include inline;
+                            margin-left: 2em;
+                            h3 {
+                                font-size: 1.5em;
+                                font-weight: bold;
+                            }
+                            ul {
+                                li {
+                                    a {
+                                        text-decoration: none;
+                                        color: $highlight;
+                                    }
+                                }
+                            }
+                        }
+                        .design-archives {
+                            @include inline;
+                            margin-left: 2em;
+                            h3 {
+                                font-size: 1.5em;
+                                font-weight: bold;
+                            }
+                            ul {
+                                li {
+                                    a {
+                                        text-decoration: none;
+                                        color: $highlight;
+                                    }
+                                }
+                            }
+                        }
+                        .zen-resources {
+                            @include inline;
+                            margin-left: 2em;
+                            h3 {
+                                font-size: 1.5em;
+                                font-weight: bold;
+                            }
+                            ul {
+                                li {
+                                    a {
+                                        text-decoration: none;
+                                        color: $highlight;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
